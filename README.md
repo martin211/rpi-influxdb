@@ -31,11 +31,11 @@ Running your InfluxDB image
 
 Start your image binding the external port `8086` of your containers:
 
-    docker run -d -p 8086:8086 hypriot/rpi-influxdb
+    docker run -d -p 8086:8086 martin211/rpi-influxdb
 
 Docker containers are easy to delete. If you are serious about keeping InfluxDB data persistently, then consider adding a volume mapping to the containers `/data` folder:
 
-    docker run -d --volume=/var/influxdb:/data -p 8086:8086 hypriot/rpi-influxdb
+    docker run -d --volume=/var/influxdb:/data -p 8086:8086 martin211/rpi-influxdb
 
 Configuring your InfluxDB
 -------------------------
@@ -45,8 +45,8 @@ You can use the RESTful API to talk to InfluxDB on port `8086`. Use the new `inf
   ```
   docker exec -it <influxdb-container-name> /usr/bin/influx
   Visit https://enterprise.influxdata.com to register for updates, InfluxDB server management, and monitoring.
-  Connected to http://localhost:8086 version 1.2.2
-  InfluxDB shell 1.2.2
+  Connected to http://localhost:8086 version 1.5.0
+  InfluxDB shell 1.5.0
   >
   ```
 
@@ -56,7 +56,7 @@ Use `-e PRE_CREATE_DB="db1;db2;db3"` to create database named "db1", "db2", and 
 
 ```docker run -d -p 8086:8086 -e ADMIN_USER="root" -e INFLUXDB_INIT_PWD="somepassword" -e PRE_CREATE_DB="db1;db2;db3" hypriot/rpi-influxdb:latest```
 
-Alternatively, create a database and user with the InfluxDB 1.2 shell:
+Alternatively, create a database and user with the InfluxDB 1.5 shell:
 
 ```
   > CREATE DATABASE db1
@@ -82,7 +82,7 @@ Credits
 
 The MIT License (MIT)
 
-Copyright (c) 2017 Hypriot
+Copyright (c) 2018 Hypriot
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
