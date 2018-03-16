@@ -1,12 +1,12 @@
-# rpi-influxdb [![Build Status](https://travis-ci.org/hypriot/rpi-influxdb.svg?branch=master)](https://travis-ci.org/hypriot/rpi-influxdb) [![This image on DockerHub](https://img.shields.io/docker/pulls/hypriot/rpi-influxdb.svg)](https://hub.docker.com/r/hypriot/rpi-influxdb/)
+# rpi-influxdb [![Build Status](https://travis-ci.org/martin211/rpi-influxdb.svg?branch=master)](https://travis-ci.org/martin211/rpi-influxdb) [![This image on DockerHub](https://img.shields.io/docker/pulls/hypriot/rpi-influxdb.svg)](https://hub.docker.com/r/hypriot/rpi-influxdb/)
 
 Raspberry Pi compatible Docker base image with InfluxDB, an open source database written in Go specifically to handle time series data with high availability and high performance requirements.
 
 ### Build Details
-- [Source Project Page](https://github.com/hypriot)
-- [Source Repository](https://github.com/hypriot/rpi-influxdb)
-- [Dockerfile](https://github.com/hypriot/rpi-influxdb/blob/master/Dockerfile)
-- [DockerHub](https://registry.hub.docker.com/u/hypriot/rpi-influxdb/)
+- [Source Project Page](https://github.com/martin211)
+- [Source Repository](https://github.com/martin211/rpi-influxdb)
+- [Dockerfile](https://github.com/martin211/rpi-influxdb/blob/master/Dockerfile)
+- [DockerHub](https://registry.hub.docker.com/u/martin211/rpi-influxdb/)
 
 #### Build the Docker Image
 ```bash
@@ -54,7 +54,7 @@ Initially create Database
 -------------------------
 Use `-e PRE_CREATE_DB="db1;db2;db3"` to create database named "db1", "db2", and "db3" on the first time the container starts automatically. Each database name is separated by `;`. For example:
 
-```docker run -d -p 8086:8086 -e ADMIN_USER="root" -e INFLUXDB_INIT_PWD="somepassword" -e PRE_CREATE_DB="db1;db2;db3" hypriot/rpi-influxdb:latest```
+```docker run -d -p 8086:8086 -e ADMIN_USER="root" -e INFLUXDB_INIT_PWD="somepassword" -e PRE_CREATE_DB="db1;db2;db3" martin211/rpi-influxdb:latest```
 
 Alternatively, create a database and user with the InfluxDB 1.5 shell:
 
