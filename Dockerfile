@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add - source /etc/os-release && \
     echo "deb https://repos.influxdata.com/debian jessie stable" | sudo tee /etc/apt/sources.list.d/influxdb.list && \
     apt-get update && apt-get install -y \
-    influxdb=1.7.10-1 \
+    influxdb=1.7.6-1 \
     --no-install-recommends && \
     apt-get remove --auto-remove -y \
     apt-transport-https && \
